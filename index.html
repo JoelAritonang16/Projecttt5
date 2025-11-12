@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <title>Story App</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script type="module" crossorigin src="./assets/js/main-qRzYcNS1.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/css/main-D5D78rO6.css">
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
+    <header>
+      <div class="main-header container">
+        <a class="brand-name" href="#/">Story App</a>
+
+        <nav id="navigation-drawer" class="navigation-drawer" aria-label="Main navigation">
+          <ul id="nav-list" class="nav-list">
+            <li><a href="#/">Beranda</a></li>
+            <li><a href="#/add-story" id="add-story-link" style="display: none;">Tambah Cerita</a></li>
+            <li><a href="#/login" id="login-link">Masuk</a></li>
+            <li><a href="#/register" id="register-link">Daftar</a></li>
+            <li><a href="#" id="logout-link" style="display: none;">Keluar</a></li>
+          </ul>
+        </nav>
+
+        <button id="drawer-button" class="drawer-button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="main-content" tabindex="-1"></main>
+
+    <footer class="main-footer" aria-label="Informasi Footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section" aria-labelledby="about-heading">
+            <h2 id="about-heading" class="footer-heading">Tentang Kami</h2>
+            <p>Story App adalah platform untuk berbagi cerita dan pengalaman menarik dari berbagai penjuru dunia.</p>
+          </div>
+          
+          <div class="footer-section" aria-labelledby="quick-links-heading">
+            <h2 id="quick-links-heading" class="footer-heading">Tautan Cepat</h2>
+            <nav aria-label="Navigasi cepat">
+              <ul class="footer-links">
+                <li><a href="#/" class="nav-link" aria-current="page">Beranda</a></li>
+                <li><a href="#/add-story" class="nav-link">Tambah Cerita</a></li>
+                <li><a href="#/login" class="nav-link">Masuk</a></li>
+                <li><a href="#/register" class="nav-link">Daftar</a></li>
+              </ul>
+            </nav>
+          </div>
+          
+          <div class="footer-section" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" class="footer-heading">Kontak</h2>
+            <address>
+              <p>
+                <a href="mailto:info@storyapp.com" class="contact-link" aria-label="Kirim email ke info@storyapp.com">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> info@storyapp.com
+                </a>
+              </p>
+              <p>
+                <a href="https://wa.me/6281234567890" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Hubungi kami via WhatsApp">
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i> +62 812-3456-7890
+                </a>
+              </p>
+            </address>
+          </div>
+        </div>
+        
+        <div class="footer-bottom" role="contentinfo">
+          <p>&copy; <span id="current-year">2023</span> Story App. Seluruh hak cipta dilindungi.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
