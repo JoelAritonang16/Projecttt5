@@ -1,0 +1,22 @@
+# Student Submission
+Nama: [Nama Lengkap]
+Kelas: [Kelas]
+
+# Deployment Information
+## GitHub Pages
+URL: [URL GitHub Pages Anda]
+
+## OR
+
+## Firebase Hosting
+Project ID: [Firebase Project ID]
+Site URL: [Firebase Hosting URL]
+
+## OR
+
+## Netlify
+Site Name: [Nama Situs Netlify]
+Site URL: [URL Netlify]
+
+# API Keys (if any)
+MAPBOX_ACCESS_KEY= [Your Mapbox Access Key]
