@@ -28,13 +28,20 @@
           <ul id="nav-list" class="nav-list">
             <li><a href="#/">Beranda</a></li>
             <li><a href="#/add-story" id="add-story-link" style="display: none;">Tambah Cerita</a></li>
+            <li class="nav-push">
+              <button id="push-toggle" class="push-toggle" type="button" aria-pressed="false" title="Enable Push Notifications" aria-label="Enable Push Notifications">
+                <span class="sr-only">Enable Push Notifications</span>
+              </button>
+            </li>
             <li><a href="#/login" id="login-link">Masuk</a></li>
             <li><a href="#/register" id="register-link">Daftar</a></li>
             <li><a href="#" id="logout-link" style="display: none;">Keluar</a></li>
           </ul>
         </nav>
 
-        <button id="drawer-button" class="drawer-button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <div class="header-right">
+          <button id="drawer-button" class="drawer-button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        </div>
       </div>
     </header>
 

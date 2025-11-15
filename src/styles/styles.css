@@ -27,6 +27,14 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  position: relative;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto; /* push to the far right */
 }
 
 .brand-name {
@@ -680,7 +688,9 @@ header {
     background-color: transparent;
 
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* keep natural width so bell can align at far right */
+    margin-left: auto; /* push whole nav to the right side */
 
     position: static;
     box-shadow: none;
@@ -689,6 +699,8 @@ header {
 
   .nav-list {
     flex-direction: row;
+    align-items: center;
+    gap: 0 24px; /* spacing between items */
   }
 
   .nav-list li a {
@@ -697,6 +709,7 @@ header {
 
   .drawer-button {
     display: none;
+    order: 2;
   }
 }
 
@@ -850,5 +863,92 @@ header {
   
   .contact-link {
     justify-content: center;
+  }
+}
+
+/* Push Toggle (Bell) */
+#push-toggle {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #1f2937; /* gray-800 */
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-left: 8px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  font-size: 0; /* hide text label, icon via ::before */
+  position: relative; /* for badge positioning */
+  order: 0;
+}
+
+#push-toggle::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0f3"; /* bell */
+  font-weight: 400; /* regular */
+  font-size: 20px;
+  line-height: 1;
+}
+
+#push-toggle:hover,
+#push-toggle:focus {
+  background: rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+
+/* Subscribed state: solid bell and primary color */
+#push-toggle[aria-pressed="true"] {
+  color: #0066cc; /* brand blue */
+}
+
+#push-toggle[aria-pressed="true"]::before {
+  font-weight: 900; /* solid */
+}
+
+/* Small status badge (dot) when subscribed */
+#push-toggle[aria-pressed="true"]::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #0066cc; /* brand blue */
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+}
+
+/* Toggle animation */
+@keyframes bell-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+#push-toggle[aria-pressed="true"],
+#push-toggle[aria-pressed="false"] {
+  animation: bell-pop 180ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  #push-toggle {
+    color: #e5e7eb; /* gray-200 */
+  }
+
+  #push-toggle:hover,
+  #push-toggle:focus {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  #push-toggle[aria-pressed="true"] {
+    color: #66a6ff; /* brand blue light */
+  }
+  #push-toggle[aria-pressed="true"]::after {
+    box-shadow: 0 0 0 2px rgba(26, 31, 41, 0.85); /* darker ring in dark mode */
   }
 }
